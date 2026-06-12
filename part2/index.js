@@ -1,22 +1,24 @@
-// Loops and Arrays
+// Push Pop Unshift Shift Challenge
+let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
 
-let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"];
+// You need to help me fixup the largeCountries array so that
+// China and Pakistan are added back into their respective places
 
-/* Use a for loop to log the following to the console:
+// Use push() & pop() and their counterparts unshift() & shift()
+// Google how to use unshift() and shift()
 
-The 5 largest countries in the world:
-- China
-- India
-- United States
-- Indinesia
-- Pakistan
-*/
+// Removing Monaco using pop
+largeCountries.pop();
+console.log(`Array after removing Monaco: ${largeCountries}`);
 
-console.log(`The 5 largest countries in the world:`);
-countryLoop();
+// Shift removes first element from the arrray
+largeCountries.shift();
+console.log(`Array after shifting Tuvalu: ${largeCountries}`);
 
-function countryLoop() {
-  for (const country of largeCountries) {
-    console.log(country);
-  }
-}
+// Push adds an element to the last of the array
+largeCountries.push("Pakistan");
+console.log(`Array after pushing Pakistan: ${largeCountries}`);
+
+// Unshift is used to add elements to the beginning of the array
+largeCountries.unshift("China");
+console.log(`Array after unshifting China: ${largeCountries}`);
