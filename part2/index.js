@@ -1,10 +1,38 @@
-// Rock, Paper, Scissors
+// EmojiFighter
 
-let hands = ["Rock", "Paper", "Scissors"];
+let fighters = [
+  "🐉",
+  "🐥",
+  "🐊",
+  "💩",
+  "🦍",
+  "🐢",
+  "🐩",
+  "🦭",
+  "🦀",
+  "🐝",
+  "🤖",
+  "🐘",
+  "🐸",
+  "🕷",
+  "🐆",
+  "🦕",
+  "🦁",
+];
 
-function itemReturn() {
-  let hand = Math.floor(Math.random() * 3);
-  console.log(hands[hand]);
-}
+let stageEl = document.getElementById("stage");
+let fightButton = document.getElementById("fightButton");
 
-itemReturn();
+fightButton.addEventListener("click", function () {
+  // Challenge:
+  // When the user clicks on the "Pick Fighters" button, pick two random
+  // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
+  let choiceOne = Math.floor(Math.random() * fighters.length);
+  let choiceTwo = Math.floor(Math.random() * fighters.length);
+
+  let fighterOne = fighters[choiceOne];
+  let fighterTwo = fighters[choiceTwo];
+
+  stageEl.textContent = `${fighterOne} VS ${fighterTwo}`;
+  console.log(`Fighters Generated.`);
+});
