@@ -1,38 +1,22 @@
-// EmojiFighter
+// Array Sorting
 
-let fighters = [
-  "🐉",
-  "🐥",
-  "🐊",
-  "💩",
-  "🦍",
-  "🐢",
-  "🐩",
-  "🦭",
-  "🦀",
-  "🐝",
-  "🤖",
-  "🐘",
-  "🐸",
-  "🕷",
-  "🐆",
-  "🦕",
-  "🦁",
-];
+let fruits = ["🍎", "🍊", "🍎", "🍎", "🍊"];
+let appleShelf = document.getElementById("apple-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
 
-let stageEl = document.getElementById("stage");
-let fightButton = document.getElementById("fightButton");
+// Create a function that puts the apples onto the appleShelf
+// and the oranges onto the orangeShelf. Use a for loop,
+// a conditional statement, and the textContent property.
 
-fightButton.addEventListener("click", function () {
-  // Challenge:
-  // When the user clicks on the "Pick Fighters" button, pick two random
-  // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
-  let choiceOne = Math.floor(Math.random() * fighters.length);
-  let choiceTwo = Math.floor(Math.random() * fighters.length);
+sortFruit();
 
-  let fighterOne = fighters[choiceOne];
-  let fighterTwo = fighters[choiceTwo];
-
-  stageEl.textContent = `${fighterOne} VS ${fighterTwo}`;
-  console.log(`Fighters Generated.`);
-});
+function sortFruit() {
+  for (const fruit of fruits) {
+    if (fruit === "🍎") {
+      appleShelf.textContent += fruit;
+    } else {
+      orangeShelf.textContent += fruit;
+    }
+  }
+  console.log(`Sorting Over.`);
+}
